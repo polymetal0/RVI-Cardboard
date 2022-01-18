@@ -185,7 +185,8 @@ namespace PaperPlaneTools.AR {
 
 			gameObject.transform.localPosition = MatrixHelper.GetPosition (matrix);
 			gameObject.transform.localRotation = MatrixHelper.GetQuaternion (matrix);
-			gameObject.transform.localScale = MatrixHelper.GetScale (matrix);
+			gameObject.transform.eulerAngles += (Vector3.right * -90.0f);
+			//gameObject.transform.localScale = MatrixHelper.GetScale (matrix);
 		}
 	}
 }

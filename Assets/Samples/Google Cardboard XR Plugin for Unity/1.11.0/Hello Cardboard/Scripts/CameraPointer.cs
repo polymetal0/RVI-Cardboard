@@ -27,6 +27,7 @@ public class CameraPointer : MonoBehaviour
     private const float _maxDistance = 10;
     private GameObject _gazedAtObject = null;
 
+    public GameObject pointer;
     /// <summary>
     /// Update is called once per frame.
     /// </summary>
@@ -58,5 +59,8 @@ public class CameraPointer : MonoBehaviour
         {
             _gazedAtObject?.SendMessage("OnPointerClick");
         }
+
+        Ray ray = Camera.main.ScreenPointToRay(transform.forward);
+        pointer.transform.position = transform.forward;
     }
 }

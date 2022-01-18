@@ -32,11 +32,10 @@ public class SoloMusic : MonoBehaviour
                 if (clip.gameObject.name != soloClip)
                 {
                     clip.mute = true;
-                    Debug.Log("puta " + soloClip + clip.gameObject.name);
                 }
                 else
                 {
-                    clip.mute = false;
+                    //clip.mute = false;
                 }
             }
         }
