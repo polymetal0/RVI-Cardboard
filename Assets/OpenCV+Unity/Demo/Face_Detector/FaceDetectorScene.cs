@@ -56,7 +56,6 @@
 		/// <summary>
 		/// Per-frame video capture processor
 		/// </summary>
-		public GameObject faceMask;
 		protected override bool ProcessTexture(WebCamTexture input, ref Texture2D output)
 		{
 			// detect everything we're interested in
@@ -64,7 +63,6 @@
 
 			// mark detected objects
 			processor.MarkDetected();
-			faceMask.SetActive(true);
 
 			// processor.Image now holds data we'd like to visualize
 			output = Unity.MatToTexture(processor.Image, output);   // if output is valid texture it's buffer will be re-used, otherwise it will be re-created
