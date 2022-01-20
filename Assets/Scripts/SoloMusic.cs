@@ -6,18 +6,6 @@ public class SoloMusic : MonoBehaviour
 {
     public AudioSource[] clips;
     public GameObject reverb;
-    // Start is called before the first frame update
-    void Start()
-    {
-        //clips = GetComponentsInChildren<AudioSource>();
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void MuteAll(string soloClip)
     {
@@ -33,16 +21,12 @@ public class SoloMusic : MonoBehaviour
                 {
                     clip.mute = true;
                 }
-                else
-                {
-                    //clip.mute = false;
-                }
             }
         }
 
     }
 
-    public void UnMuteAll()
+    public void UnmuteAll()
     {
         foreach (AudioSource clip in clips)
         {
